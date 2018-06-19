@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="7" type="collection">
+        <element choice="3" display="true" label="Search List" max_length="4000" name="search_list" type="glide_list">
+            <choice>
+                <element label="Test1" value="1 Value"/>
+                <element label="Test2" value="2 Value"/>
+                <element label="Test3" value="3 value"/>
+            </choice>
+        </element>
         <element attributes="edge_encryption_enabled=true" label="Other" max_length="40" name="u_other" type="string"/>
         <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
         <element attributes="edge_encryption_enabled=true" label="Requested for email" mandatory="true" max_length="40" name="u_requested_for_email" type="string"/>
